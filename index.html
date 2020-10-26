@@ -12,5 +12,16 @@
     <div id="debug-container">
     </div>
   </body>
+  
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function (_evt) {
+      const compass = new Compass();
+      compass.start();
+      compass.debug();
+      compass.register(function(summary) {
+        console.log(summary);
+      });
+    });
+  </script>
 
 </html>

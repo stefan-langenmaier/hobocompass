@@ -44,7 +44,7 @@ class Compass {
   }
   
   compassInterval() {
-    const QUALITY_LIMIT = 100000;
+    const QUALITY_LIMIT = 10;
     this.generateAverages();
     this.generateSummary();
     if (this.summary.quality && this.summary.quality < QUALITY_LIMIT) {
@@ -57,8 +57,8 @@ class Compass {
   }
 
   fire() {
-    for (fun in this.handles) {
-      fun(this.summary);
+    for (let i = 0; i < this.handles.length; i++) {
+      this.handles[i](this.summary);
     }
   }
 
@@ -84,9 +84,9 @@ class Compass {
     const DIFF_DISTANCE = 5;
     let details = [];
     for (let i = 0; i < LATEST_WINDOW-DIFF_DISTANCE; i++) {
-      const dist = Util.geoDistance(this.averages[i].coordinates, this.averages[i+DIFF_DISTANCE].coordinates);
+      const dist = CompassUtil.geoDistance(this.averages[i].coordinates, this.averages[i+DIFF_DISTANCE].coordinates);
       const speed = dist / (this.averages[i].timestamp - this.averages[i+DIFF_DISTANCE].timestamp);
-      const bearing = Util.bearing(this.averages[i].coordinates, this.averages[i+DIFF_DISTANCE].coordinates);
+      const bearing = CompassUtil.bearing(this.averages[i].coordinates, this.averages[i+DIFF_DISTANCE].coordinates);
       const orientation = this.averages[i].orientation.alpha;
       
       const oldNorthOffset = (this.summary.northOffset) ? this.summary.northOffset : 360;
@@ -137,14 +137,14 @@ class Compass {
         
         // analyze remaining samples
         if (samples.length !== 0) {
-          this.averages.push(Util.average(samples));
+          this.averages.push(CompassUtil.average(samples));
         }
         
         return;
       }
       if (currentTimestamp != lastTimestamp) {
         if (samples.length !== 0) {
-          this.averages.push(Util.average(samples));
+          this.averages.push(CompassUtil.average(samples));
           samples = [];
         }
       }
@@ -203,7 +203,8 @@ class Compass {
 
 }
 
-class Util {
+// TODO how to avoid name overlap with Util class in other js file?
+class CompassUtil {
   static geoDistance(first, second) {
     if ((first.latitude == second.latitude) && (first.longitude == second.longitude)) {
       return 0;
@@ -233,16 +234,16 @@ class Util {
   }
 
   static bearing(start, dest) {
-    const startLat = Util.toRadians(start.latitude);
-    const startLng = Util.toRadians(start.longitude);
-    const destLat = Util.toRadians(dest.latitude);
-    const destLng = Util.toRadians(dest.longitude);
+    const startLat = CompassUtil.toRadians(start.latitude);
+    const startLng = CompassUtil.toRadians(start.longitude);
+    const destLat = CompassUtil.toRadians(dest.latitude);
+    const destLng = CompassUtil.toRadians(dest.longitude);
 
     const y = Math.sin(destLng - startLng) * Math.cos(destLat);
     const x = Math.cos(startLat) * Math.sin(destLat) -
           Math.sin(startLat) * Math.cos(destLat) * Math.cos(destLng - startLng);
     let brng = Math.atan2(y, x);
-    brng = Util.toDegrees(brng);
+    brng = CompassUtil.toDegrees(brng);
     return (brng + 360) % 360;
   }
   
@@ -268,12 +269,3 @@ class Util {
     };
   }
 }
-
-document.addEventListener('DOMContentLoaded', function (_evt) {
-  const compass = new Compass();
-  compass.start();
-  compass.debug();
-  compass.register(function(summary) {
-    console.log(summary);
-  });
-});
