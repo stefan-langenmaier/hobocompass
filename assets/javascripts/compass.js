@@ -26,6 +26,18 @@ class Compass {
     this.compassInterval = setInterval(this.compassInterval.bind(this), 2000);
   }
 
+  record() {
+    console.log("Recording");
+    window.addEventListener("deviceorientation", this.handleOrientation.bind(this), true);
+    this.positionInterval = setInterval(this.positionInterval.bind(this), 100);
+  }
+
+  stop() {
+    console.log("Stopped recording");
+    const debugElement = document.getElementById('debug-container');
+    debugElement.innerText = JSON.stringify(this.buffer);
+  }
+
   debug() {
     this.debugInterval = setInterval(this.showDebug.bind(this), 1000);
   }
@@ -93,7 +105,7 @@ class Compass {
       const newNorthOffset = (bearing + orientation)%360;
       
       // change in last calculation squared
-      const quality = Math.pow(Math.abs(oldNorthOffset- newNorthOffset), 2);
+      const quality = Math.pow(Math.abs(oldNorthOffset- newNorthOffset), 2);  // TODO coord change
       
       if (this.hasEnoughSpeed(speed)) {
         details.push({
@@ -111,8 +123,8 @@ class Compass {
     let summary = {
         dist: details.reduce((sum, x) => (sum + x.dist), 0) / cntDetails,
         speed: details.reduce((sum, x) => (sum + x.speed), 0) / cntDetails,
-        bearing: details.reduce((sum, x) => (sum + x.bearing), 0) / cntDetails, // TODO this can be tricky with jumps
-        orientation: details.reduce((sum, x) => (sum + x.orientation), 0) / cntDetails, // TODO this can be tricky with jumps
+        bearing: details.reduce((sum, x) => (sum + x.bearing), 0) / cntDetails,  // TODO coord change
+        orientation: details.reduce((sum, x) => (sum + x.orientation), 0) / cntDetails,  // TODO coord change
         quality: details.reduce((sum, x) => (sum + x.quality), 0) / cntDetails
     };
     const northOffset = (summary.bearing + summary.orientation)%360;
@@ -255,13 +267,13 @@ class CompassUtil {
     return {
       timestamp:   samples[0].timestamp,
       orientation: {
-        alpha: samples.reduce((sum, x) => (sum + x.orientation.alpha), 0) / cntSamples,
+        alpha: samples.reduce((sum, x) => (sum + x.orientation.alpha), 0) / cntSamples, // TODO coord change
       },
       coordinates: {
         accuracy:         samples.reduce((sum, x) => (sum + x.coordinates.accuracy),         0) / cntSamples,
         altitude:         samples.reduce((sum, x) => (sum + x.coordinates.altitude),         0) / cntSamples,
         altitudeAccuracy: samples.reduce((sum, x) => (sum + x.coordinates.altitudeAccuracy), 0) / cntSamples,
-        heading:          samples.reduce((sum, x) => (sum + x.coordinates.heading),          0) / cntSamples,
+        heading:          samples.reduce((sum, x) => (sum + x.coordinates.heading),          0) / cntSamples, // TODO coord change
         latitude:         samples.reduce((sum, x) => (sum + x.coordinates.latitude),         0) / cntSamples,
         longitude:        samples.reduce((sum, x) => (sum + x.coordinates.longitude),        0) / cntSamples,
         speed:            samples.reduce((sum, x) => (sum + x.coordinates.speed),            0) / cntSamples
@@ -269,3 +281,4 @@ class CompassUtil {
     };
   }
 }
+module.exports = Compass;
