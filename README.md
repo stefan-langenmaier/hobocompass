@@ -10,3 +10,11 @@ openssl req -new -x509 -keyout localhost.pem -out localhost.pem -days 365 -nodes
 
 python3 simple-debug-server.py
 
+
+# format json file
+
+`cat trace-fp3-20201118-001.json | jq . > trace-fp3-20201118-001.json.clean`
+
+# run tests
+
+`/home/stefan/node_modules/jest/bin/jest.js`

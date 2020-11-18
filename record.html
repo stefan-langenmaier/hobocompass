@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='user-scalable=0'/>
+    <title>hobocompass</title>
+    <script type="text/javascript" src="assets/javascripts/compass.js"></script>
+  </head>
+
+  <body>
+    <input id="startRecording" type="button" name="Start" title="Start" value="Start">
+    <input id="stopRecording" type="button" name="Stop" title="Stop" value="Stop">
+    <div id="debug-container">
+    </div>
+  </body>
+  
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function (_evt) {
+      const startButton = document.getElementById("startRecording");
+      const stopButton = document.getElementById("stopRecording");
+      const compass = new Compass();
+      
+      startButton.addEventListener('click', function (_e) {
+        alert("Starting");
+        compass.record();
+      });
+      
+      stopButton.addEventListener('click', function (_e) {
+        compass.stop();
+        alert("Stopped");
+      });
+    });
+  </script>
+
+</html>
