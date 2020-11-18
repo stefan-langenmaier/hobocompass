@@ -17,4 +17,4 @@ python3 simple-debug-server.py
 
 # run tests
 
-`/home/stefan/node_modules/jest/bin/jest.js`
+`npm run test`

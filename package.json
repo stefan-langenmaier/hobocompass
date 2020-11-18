@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "test": "/home/stefan/node_modules/jest/bin/jest.js"
+  }
+}
