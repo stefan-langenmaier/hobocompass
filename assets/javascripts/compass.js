@@ -90,11 +90,17 @@ class Compass {
   }
 
   generateSummary() {
-    const LATEST_WINDOW = 10;
-    if (this.averages.length < LATEST_WINDOW) return {message: 'not enough data'};
-    this.averages = this.averages.slice((-1)*LATEST_WINDOW);
+    const MAX_LATEST_WINDOW = 30;
+    const MIN_LATEST_WINDOW = 2;
+    if (this.averages.length < MIN_LATEST_WINDOW) return {message: 'not enough data'};
 
-    const DIFF_DISTANCE = 5;
+    let LATEST_WINDOW = this.averages.length;
+    if (LATEST_WINDOW > MAX_LATEST_WINDOW) {
+        LATEST_WINDOW = MAX_LATEST_WINDOW;
+        this.averages = this.averages.slice((-1)*LATEST_WINDOW);
+    }
+
+    const DIFF_DISTANCE = Math.min(5, Math.ceil(LATEST_WINDOW/3));
     let details = [];
     for (let i = 0; i < LATEST_WINDOW-DIFF_DISTANCE; i++) {
       const dist = CompassUtil.geoDistance(this.averages[i].coordinates, this.averages[i+DIFF_DISTANCE].coordinates);
