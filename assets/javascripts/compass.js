@@ -22,14 +22,14 @@ class Compass {
 
   start() {
     window.addEventListener("deviceorientation", this.handleOrientation.bind(this), true);
-    this.positionInterval = setInterval(this.positionInterval.bind(this), 100);
+    this.positionId = window.navigator.geolocation.watchPosition(this.updateCoordinates.bind(this), this.noGeoPositionAvailable.bind(this), this.geoLocationOptions);
     this.compassInterval = setInterval(this.compassInterval.bind(this), 2000);
   }
 
   record() {
     console.log("Recording");
     window.addEventListener("deviceorientation", this.handleOrientation.bind(this), true);
-    this.positionInterval = setInterval(this.positionInterval.bind(this), 100);
+    this.positionId = window.navigator.geolocation.watchPosition(this.updateCoordinates.bind(this), this.noGeoPositionAvailable.bind(this), this.geoLocationOptions);
   }
 
   stop() {
