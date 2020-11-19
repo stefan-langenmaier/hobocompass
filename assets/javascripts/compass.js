@@ -13,10 +13,12 @@ class Compass {
     };
     
     this.handles = [];
+    this.currentQuality = 0;
 
     this.geoLocationOptions = {
       enableHighAccuracy: true,
-      timeout: 2000
+      timeout: 2000,
+      maximumAge: 1000
     };
   }
 
@@ -51,15 +53,14 @@ class Compass {
     };
   }
 
-  positionInterval() {
-    window.navigator.geolocation.getCurrentPosition(this.updateCoordinates.bind(this), this.noGeoPositionAvailable.bind(this), this.geoLocationOptions);
-  }
-  
   compassInterval() {
-    const QUALITY_LIMIT = 10;
+    const QUALITY_LIMIT = 0.95;
     this.generateAverages();
     this.generateSummary();
-    if (this.summary.quality && this.summary.quality < QUALITY_LIMIT) {
+    // let the latest quality decay so the orientation is refreshed when new good estimates arrive
+    this.currentQuality -= 0.001;
+    if (this.summary.quality && this.summary.quality > QUALITY_LIMIT && this.summary.quality > this.currentQuality) {
+      this.currentQuality = this.summary.quality;
       this.fire();
     }
   }
@@ -87,50 +88,54 @@ class Compass {
       debugElement.innerText += `quality: ${this.summary.quality}\n`;
     }
   }
-  
+
   generateSummary() {
     const LATEST_WINDOW = 10;
     if (this.averages.length < LATEST_WINDOW) return {message: 'not enough data'};
     this.averages = this.averages.slice((-1)*LATEST_WINDOW);
-    
+
     const DIFF_DISTANCE = 5;
     let details = [];
     for (let i = 0; i < LATEST_WINDOW-DIFF_DISTANCE; i++) {
       const dist = CompassUtil.geoDistance(this.averages[i].coordinates, this.averages[i+DIFF_DISTANCE].coordinates);
       const speed = dist / (this.averages[i].timestamp - this.averages[i+DIFF_DISTANCE].timestamp);
       const bearing = CompassUtil.bearing(this.averages[i].coordinates, this.averages[i+DIFF_DISTANCE].coordinates);
-      const orientation = this.averages[i].orientation.alpha;
       
-      const oldNorthOffset = (this.summary.northOffset) ? this.summary.northOffset : 360;
-      const newNorthOffset = (bearing + orientation)%360;
-      
-      // change in last calculation squared
-      const quality = Math.pow(Math.abs(oldNorthOffset- newNorthOffset), 2);  // TODO coord change
-      
+      const orientationReducer = (acc, average) => CompassUtil.angleAcc(acc, average.orientation.alpha);
+      const orientation = CompassUtil.convertVector([
+            this.averages[i],
+            this.averages[i+DIFF_DISTANCE]
+            ].reduce(orientationReducer, {x:0, y:0}), 2).angle;
+
+      const northOffset = (bearing + orientation)%360;
+
       if (this.hasEnoughSpeed(speed)) {
         details.push({
             dist: dist,
             speed: speed,
             bearing: bearing,
             orientation: orientation,
-            quality: quality
-            
+            northOffset: northOffset
         });
       }
     }
-    
+
     const cntDetails = details.length;
+
+    const bearingReducer = (acc, detail) => CompassUtil.angleAcc(acc, detail.bearing);
+    const orientationReducer = (acc, detail) => CompassUtil.angleAcc(acc, detail.orientation);
+    const northOffsetReducer = (acc, detail) => CompassUtil.angleAcc(acc, detail.northOffset);
+    const northOffset = CompassUtil.convertVector(details.reduce(northOffsetReducer, {x:0, y:0}), cntDetails);
+
     let summary = {
         dist: details.reduce((sum, x) => (sum + x.dist), 0) / cntDetails,
         speed: details.reduce((sum, x) => (sum + x.speed), 0) / cntDetails,
-        bearing: details.reduce((sum, x) => (sum + x.bearing), 0) / cntDetails,  // TODO coord change
-        orientation: details.reduce((sum, x) => (sum + x.orientation), 0) / cntDetails,  // TODO coord change
-        quality: details.reduce((sum, x) => (sum + x.quality), 0) / cntDetails
+        bearing: CompassUtil.convertVector(details.reduce(bearingReducer, {x:0, y:0}), cntDetails).angle,
+        orientation: CompassUtil.convertVector(details.reduce(orientationReducer, {x:0, y:0}), cntDetails).angle,
+        northOffset: northOffset.angle,
+        quality: northOffset.quality
     };
-    const northOffset = (summary.bearing + summary.orientation)%360;
-    
-    summary.northOffset = northOffset;
-    
+
     this.summary = summary;
   }
 
@@ -177,16 +182,16 @@ class Compass {
     };
     if (this.isAccurateEnough(this.coordinatesLatest) &&
         this.isNew(this.coordinatesLatest)) {
-     this.buffer.push({
-       timestamp:   Date.now(),
-       orientation: Object.assign({}, this.orientationLatest), // is this needed
-       coordinates: Object.assign({}, this.coordinatesLatest) // is this needed
-     });
+      this.buffer.push({
+        timestamp:   Date.now(),
+        orientation: Object.assign({}, this.orientationLatest), // is this needed
+        coordinates: Object.assign({}, this.coordinatesLatest) // is this needed
+      });
     }
   }
   
   isAccurateEnough(coordinates) {
-    return coordinates.accuracy < 500;
+    return coordinates.accuracy < 25;
   }
   
   isNew(coordinates) {
@@ -197,12 +202,11 @@ class Compass {
   }
 
   hasEnoughSpeed(speed) {
-    // TODO introduce a minimum speed to improve the quality
-    return true;
-//    if (speed > 0.001) {
-//      return true;
-//    }
-//    return false;
+    const MY_WALKING_SPEED=0.0015;
+    if (Math.abs(speed) > (MY_WALKING_SPEED/2)) {
+      return true;
+    }
+    return false;
   }
 
   noGeoPositionAvailable(err) {
@@ -258,22 +262,40 @@ class CompassUtil {
     brng = CompassUtil.toDegrees(brng);
     return (brng + 360) % 360;
   }
-  
+
+  static angleAcc(acc, angle) {
+    return {
+        x: acc.x + Math.cos(CompassUtil.toRadians(angle)),
+        y: acc.y + Math.sin(CompassUtil.toRadians(angle))
+    };
+  }
+
+  static convertVector(angle_sum, normalisation_factor) {
+    return {
+        angle: (CompassUtil.toDegrees(Math.atan2(angle_sum.y, angle_sum.x))+ 360) % 360,
+        quality: Math.sqrt(Math.pow(angle_sum.x, 2) + Math.pow(angle_sum.y, 2)) / normalisation_factor
+    };
+  }
+
   static average(samples) {
     const cntSamples = samples.length;
     
     if (cntSamples === 0) throw "Empty samples list!";
     
+    const orientationReducer = (acc, sample) => CompassUtil.angleAcc(acc, sample.orientation.alpha);
+    const headingReducer = (acc, sample) => CompassUtil.angleAcc(acc, sample.coordinates.heading);
+
     return {
       timestamp:   samples[0].timestamp,
+
       orientation: {
-        alpha: samples.reduce((sum, x) => (sum + x.orientation.alpha), 0) / cntSamples, // TODO coord change
+        alpha: CompassUtil.convertVector(samples.reduce(orientationReducer, {x:0, y:0}), samples.length).angle
       },
       coordinates: {
         accuracy:         samples.reduce((sum, x) => (sum + x.coordinates.accuracy),         0) / cntSamples,
         altitude:         samples.reduce((sum, x) => (sum + x.coordinates.altitude),         0) / cntSamples,
         altitudeAccuracy: samples.reduce((sum, x) => (sum + x.coordinates.altitudeAccuracy), 0) / cntSamples,
-        heading:          samples.reduce((sum, x) => (sum + x.coordinates.heading),          0) / cntSamples, // TODO coord change
+        heading:          CompassUtil.convertVector(samples.reduce(headingReducer, {x:0, y:0}), samples.length).angle,
         latitude:         samples.reduce((sum, x) => (sum + x.coordinates.latitude),         0) / cntSamples,
         longitude:        samples.reduce((sum, x) => (sum + x.coordinates.longitude),        0) / cntSamples,
         speed:            samples.reduce((sum, x) => (sum + x.coordinates.speed),            0) / cntSamples

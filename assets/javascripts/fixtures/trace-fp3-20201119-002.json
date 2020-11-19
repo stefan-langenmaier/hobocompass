@@ -1,0 +1,1010 @@
+[
+  {
+    "timestamp": 1605805679109,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.74943419734849,
+      "beta": 16.07595055475,
+      "gamma": 1.167558325822485
+    },
+    "coordinates": {
+      "accuracy": 22.512001037597656,
+      "altitude": 560.320068359375,
+      "altitudeAccuracy": 32,
+      "heading": 99.5,
+      "latitude": 48.3319128,
+      "longitude": 10.86684689,
+      "speed": 0.7300000190734863
+    }
+  },
+  {
+    "timestamp": 1605805680108,
+    "orientation": {
+      "absolute": false,
+      "alpha": 93.1281544093295,
+      "beta": 14.84313198664128,
+      "gamma": 0.5834353333340981
+    },
+    "coordinates": {
+      "accuracy": 11.791999816894531,
+      "altitude": 554.3316650390625,
+      "altitudeAccuracy": 16,
+      "heading": 12.399999618530273,
+      "latitude": 48.33197948,
+      "longitude": 10.86679066,
+      "speed": 1.340000033378601
+    }
+  },
+  {
+    "timestamp": 1605805681102,
+    "orientation": {
+      "absolute": false,
+      "alpha": 94.05998815147228,
+      "beta": 13.09017288145086,
+      "gamma": -5.883142082122648
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 560.0985107421875,
+      "altitudeAccuracy": 8,
+      "heading": 338,
+      "latitude": 48.33203848,
+      "longitude": 10.86677144,
+      "speed": 1.1200000047683716
+    }
+  },
+  {
+    "timestamp": 1605805682103,
+    "orientation": {
+      "absolute": false,
+      "alpha": 93.43320698182097,
+      "beta": 12.767232016996706,
+      "gamma": -3.235333156475949
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 556.851806640625,
+      "altitudeAccuracy": 6,
+      "heading": 6.199999809265137,
+      "latitude": 48.3320441,
+      "longitude": 10.86677069,
+      "speed": 1.3799999952316284
+    }
+  },
+  {
+    "timestamp": 1605805683102,
+    "orientation": {
+      "absolute": false,
+      "alpha": 87.10213667600286,
+      "beta": 19.112804803494168,
+      "gamma": -0.8573518174818486
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 554.740966796875,
+      "altitudeAccuracy": 6,
+      "heading": 1.100000023841858,
+      "latitude": 48.33205384,
+      "longitude": 10.86677227,
+      "speed": 1.6200000047683716
+    }
+  },
+  {
+    "timestamp": 1605805684103,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.65280702657334,
+      "beta": 16.57857472954079,
+      "gamma": -4.783694358217921
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 555.4248046875,
+      "altitudeAccuracy": 4,
+      "heading": 6.400000095367432,
+      "latitude": 48.33206423,
+      "longitude": 10.86677584,
+      "speed": 1.5099999904632568
+    }
+  },
+  {
+    "timestamp": 1605805685101,
+    "orientation": {
+      "absolute": false,
+      "alpha": 88.64522951719957,
+      "beta": 18.385729584679048,
+      "gamma": -1.162474721374613
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 554.6650390625,
+      "altitudeAccuracy": 4,
+      "heading": 3.5999999046325684,
+      "latitude": 48.33207518,
+      "longitude": 10.86677816,
+      "speed": 1.4900000095367432
+    }
+  },
+  {
+    "timestamp": 1605805686109,
+    "orientation": {
+      "absolute": false,
+      "alpha": 89.41792998396069,
+      "beta": 15.69969094436522,
+      "gamma": -3.2139240103577325
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 553.43603515625,
+      "altitudeAccuracy": 3,
+      "heading": 6.699999809265137,
+      "latitude": 48.33208647,
+      "longitude": 10.86678083,
+      "speed": 1.4500000476837158
+    }
+  },
+  {
+    "timestamp": 1605805687100,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.5803669027816,
+      "beta": 15.756548651284692,
+      "gamma": -4.754947701146407
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 553.523681640625,
+      "altitudeAccuracy": 3,
+      "heading": 9.600000381469727,
+      "latitude": 48.33209842,
+      "longitude": 10.86678426,
+      "speed": 1.4299999475479126
+    }
+  },
+  {
+    "timestamp": 1605805688105,
+    "orientation": {
+      "absolute": false,
+      "alpha": 95.1922918865956,
+      "beta": 14.891138321153964,
+      "gamma": -3.0271825045397485
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 553.76953125,
+      "altitudeAccuracy": 3,
+      "heading": 17.700000762939453,
+      "latitude": 48.33210903,
+      "longitude": 10.86678903,
+      "speed": 1.399999976158142
+    }
+  },
+  {
+    "timestamp": 1605805689110,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.9226885066211,
+      "beta": 15.718626993725817,
+      "gamma": -2.9337050313847057
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 552.47607421875,
+      "altitudeAccuracy": 3,
+      "heading": 17.700000762939453,
+      "latitude": 48.33211972,
+      "longitude": 10.86679384,
+      "speed": 1.3799999952316284
+    }
+  },
+  {
+    "timestamp": 1605805690111,
+    "orientation": {
+      "absolute": false,
+      "alpha": 92.76802013141452,
+      "beta": 10.496105252292438,
+      "gamma": -2.2852223864733094
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 553.30078125,
+      "altitudeAccuracy": 3,
+      "heading": 15,
+      "latitude": 48.33213181,
+      "longitude": 10.86679764,
+      "speed": 1.3799999952316284
+    }
+  },
+  {
+    "timestamp": 1605805691105,
+    "orientation": {
+      "absolute": false,
+      "alpha": 93.83903306169009,
+      "beta": 13.328900120047676,
+      "gamma": -5.1275629596708505
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 553.298828125,
+      "altitudeAccuracy": 3,
+      "heading": 7.699999809265137,
+      "latitude": 48.33214393,
+      "longitude": 10.86680034,
+      "speed": 1.3799999952316284
+    }
+  },
+  {
+    "timestamp": 1605805692100,
+    "orientation": {
+      "absolute": false,
+      "alpha": 96.27763373429863,
+      "beta": 14.529358564121354,
+      "gamma": -5.589406139319322
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 552.7193603515625,
+      "altitudeAccuracy": 3,
+      "heading": 6.199999809265137,
+      "latitude": 48.33215459,
+      "longitude": 10.86680147,
+      "speed": 1.3600000143051147
+    }
+  },
+  {
+    "timestamp": 1605805693109,
+    "orientation": {
+      "absolute": false,
+      "alpha": 90.33570988972458,
+      "beta": 12.514563516295722,
+      "gamma": -3.371726811941343
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 552.27392578125,
+      "altitudeAccuracy": 3,
+      "heading": 2.299999952316284,
+      "latitude": 48.33216453,
+      "longitude": 10.86680136,
+      "speed": 1.340000033378601
+    }
+  },
+  {
+    "timestamp": 1605805694098,
+    "orientation": {
+      "absolute": false,
+      "alpha": 94.89828936765309,
+      "beta": 13.3770010249058,
+      "gamma": -4.978015488564246
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 550.384765625,
+      "altitudeAccuracy": 4,
+      "heading": 3,
+      "latitude": 48.33217321,
+      "longitude": 10.86680248,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805695116,
+    "orientation": {
+      "absolute": false,
+      "alpha": 93.36754245865889,
+      "beta": 15.237786317282207,
+      "gamma": -3.6842684975472384
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 550.0059814453125,
+      "altitudeAccuracy": 4,
+      "heading": 357.20001220703125,
+      "latitude": 48.33218397,
+      "longitude": 10.86680054,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805696122,
+    "orientation": {
+      "absolute": false,
+      "alpha": 89.83889775374563,
+      "beta": 12.859757523715981,
+      "gamma": -1.3406330592833837
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 549.4014892578125,
+      "altitudeAccuracy": 4,
+      "heading": 3.5999999046325684,
+      "latitude": 48.33219493,
+      "longitude": 10.86679972,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805697126,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.27733298512351,
+      "beta": 14.118405943986241,
+      "gamma": -3.3083793687935503
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 548.61669921875,
+      "altitudeAccuracy": 6,
+      "heading": 359.8999938964844,
+      "latitude": 48.33220651,
+      "longitude": 10.86680102,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805698114,
+    "orientation": {
+      "absolute": false,
+      "alpha": 84.81698245016955,
+      "beta": 15.08517500906384,
+      "gamma": -1.2584161200570732
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 547.8232421875,
+      "altitudeAccuracy": 4,
+      "heading": 3.9000000953674316,
+      "latitude": 48.33221803,
+      "longitude": 10.86680207,
+      "speed": 1.3200000524520874
+    }
+  },
+  {
+    "timestamp": 1605805699119,
+    "orientation": {
+      "absolute": false,
+      "alpha": 84.70774049631538,
+      "beta": 15.676671826929281,
+      "gamma": -2.5159402979312424
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 547.977783203125,
+      "altitudeAccuracy": 4,
+      "heading": 0.4000000059604645,
+      "latitude": 48.33222871,
+      "longitude": 10.86680187,
+      "speed": 1.2999999523162842
+    }
+  },
+  {
+    "timestamp": 1605805700095,
+    "orientation": {
+      "absolute": false,
+      "alpha": 95.8093010070356,
+      "beta": 14.45407081097201,
+      "gamma": -1.5214554260416198
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 548.2645263671875,
+      "altitudeAccuracy": 4,
+      "heading": 0.30000001192092896,
+      "latitude": 48.33224027,
+      "longitude": 10.86679948,
+      "speed": 1.309999942779541
+    }
+  },
+  {
+    "timestamp": 1605805701119,
+    "orientation": {
+      "absolute": false,
+      "alpha": 94.0939927918459,
+      "beta": 12.74291010280397,
+      "gamma": -2.5502742446619275
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 548.2711181640625,
+      "altitudeAccuracy": 4,
+      "heading": 0.800000011920929,
+      "latitude": 48.33225159,
+      "longitude": 10.86679829,
+      "speed": 1.309999942779541
+    }
+  },
+  {
+    "timestamp": 1605805702119,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.83420110751337,
+      "beta": 14.0132625970693,
+      "gamma": -4.009327385672584
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 548.799072265625,
+      "altitudeAccuracy": 4,
+      "heading": 357.79998779296875,
+      "latitude": 48.3322633,
+      "longitude": 10.86679661,
+      "speed": 1.309999942779541
+    }
+  },
+  {
+    "timestamp": 1605805703111,
+    "orientation": {
+      "absolute": false,
+      "alpha": 88.48354734925188,
+      "beta": 14.704108593526753,
+      "gamma": -4.377089911095504
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 548.366943359375,
+      "altitudeAccuracy": 4,
+      "heading": 355.79998779296875,
+      "latitude": 48.33227437,
+      "longitude": 10.86679303,
+      "speed": 1.2999999523162842
+    }
+  },
+  {
+    "timestamp": 1605805704108,
+    "orientation": {
+      "absolute": false,
+      "alpha": 92.53220435708194,
+      "beta": 14.599579791045514,
+      "gamma": -4.415556148060849
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 548.4537353515625,
+      "altitudeAccuracy": 4,
+      "heading": 356.79998779296875,
+      "latitude": 48.33228462,
+      "longitude": 10.86679163,
+      "speed": 1.2999999523162842
+    }
+  },
+  {
+    "timestamp": 1605805705123,
+    "orientation": {
+      "absolute": false,
+      "alpha": 93.79622339032349,
+      "beta": 10.216914940648245,
+      "gamma": 2.681600434903761
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 549.234130859375,
+      "altitudeAccuracy": 4,
+      "heading": 359.70001220703125,
+      "latitude": 48.33229766,
+      "longitude": 10.86679182,
+      "speed": 1.3200000524520874
+    }
+  },
+  {
+    "timestamp": 1605805706100,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.25700505437369,
+      "beta": 14.179257576740126,
+      "gamma": 1.292577328381226
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 549.340087890625,
+      "altitudeAccuracy": 4,
+      "heading": 4.300000190734863,
+      "latitude": 48.33230937,
+      "longitude": 10.86679245,
+      "speed": 1.309999942779541
+    }
+  },
+  {
+    "timestamp": 1605805707120,
+    "orientation": {
+      "absolute": false,
+      "alpha": 89.61771046027673,
+      "beta": 15.10961173826902,
+      "gamma": 5.49379701182167
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 550.64208984375,
+      "altitudeAccuracy": 4,
+      "heading": 6,
+      "latitude": 48.33232363,
+      "longitude": 10.86679471,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805708114,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.6793021202213,
+      "beta": 14.509774548862897,
+      "gamma": -4.0130862021335805
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 550.13525390625,
+      "altitudeAccuracy": 6,
+      "heading": 11,
+      "latitude": 48.33233566,
+      "longitude": 10.86679827,
+      "speed": 1.3200000524520874
+    }
+  },
+  {
+    "timestamp": 1605805709101,
+    "orientation": {
+      "absolute": false,
+      "alpha": 84.73284484112244,
+      "beta": 17.25263857509774,
+      "gamma": 1.4827969360017783
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 548.939453125,
+      "altitudeAccuracy": 6,
+      "heading": 16.200000762939453,
+      "latitude": 48.33234903,
+      "longitude": 10.86680446,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805710124,
+    "orientation": {
+      "absolute": false,
+      "alpha": 88.44588235873222,
+      "beta": 16.041887834202846,
+      "gamma": -0.6277459622828572
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 548.5472412109375,
+      "altitudeAccuracy": 6,
+      "heading": 14.899999618530273,
+      "latitude": 48.33236006,
+      "longitude": 10.86680971,
+      "speed": 1.3200000524520874
+    }
+  },
+  {
+    "timestamp": 1605805711120,
+    "orientation": {
+      "absolute": false,
+      "alpha": 82.19118332314497,
+      "beta": 15.866419099139167,
+      "gamma": 5.09429098440402
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 547.30810546875,
+      "altitudeAccuracy": 6,
+      "heading": 10.100000381469727,
+      "latitude": 48.33236909,
+      "longitude": 10.86681362,
+      "speed": 1.309999942779541
+    }
+  },
+  {
+    "timestamp": 1605805712103,
+    "orientation": {
+      "absolute": false,
+      "alpha": 89.97257179662273,
+      "beta": 15.843575284704237,
+      "gamma": 0.5522040654807162
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 546.8876953125,
+      "altitudeAccuracy": 6,
+      "heading": 4.5,
+      "latitude": 48.33237823,
+      "longitude": 10.86681664,
+      "speed": 1.309999942779541
+    }
+  },
+  {
+    "timestamp": 1605805713105,
+    "orientation": {
+      "absolute": false,
+      "alpha": 88.61730441756178,
+      "beta": 15.487014539735428,
+      "gamma": 2.2460882960065742
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 547.67529296875,
+      "altitudeAccuracy": 6,
+      "heading": 4,
+      "latitude": 48.33238952,
+      "longitude": 10.86681911,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805714115,
+    "orientation": {
+      "absolute": false,
+      "alpha": 83.25672455223133,
+      "beta": 16.29781248473875,
+      "gamma": 1.9439983827150193
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 547.7049560546875,
+      "altitudeAccuracy": 6,
+      "heading": 4.5,
+      "latitude": 48.33240043,
+      "longitude": 10.86682085,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805715101,
+    "orientation": {
+      "absolute": false,
+      "alpha": 89.09614341074355,
+      "beta": 15.047230149749305,
+      "gamma": 1.6578810526240988
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 547.12548828125,
+      "altitudeAccuracy": 6,
+      "heading": 3.5,
+      "latitude": 48.33241098,
+      "longitude": 10.86682287,
+      "speed": 1.3200000524520874
+    }
+  },
+  {
+    "timestamp": 1605805716105,
+    "orientation": {
+      "absolute": false,
+      "alpha": 87.66258602234753,
+      "beta": 17.65551471911738,
+      "gamma": -2.2136804819970326
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 547.397216796875,
+      "altitudeAccuracy": 6,
+      "heading": 4.699999809265137,
+      "latitude": 48.33242198,
+      "longitude": 10.86682438,
+      "speed": 1.3200000524520874
+    }
+  },
+  {
+    "timestamp": 1605805717115,
+    "orientation": {
+      "absolute": false,
+      "alpha": 87.73044980653204,
+      "beta": 18.003506148719023,
+      "gamma": -1.1431814744759787
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 547.067626953125,
+      "altitudeAccuracy": 4,
+      "heading": 5,
+      "latitude": 48.3324329,
+      "longitude": 10.8668272,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805718105,
+    "orientation": {
+      "absolute": false,
+      "alpha": 87.88912282632559,
+      "beta": 16.426571468784093,
+      "gamma": -0.8218248427461581
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 547.160888671875,
+      "altitudeAccuracy": 4,
+      "heading": 8.199999809265137,
+      "latitude": 48.33244372,
+      "longitude": 10.86682927,
+      "speed": 1.340000033378601
+    }
+  },
+  {
+    "timestamp": 1605805719111,
+    "orientation": {
+      "absolute": false,
+      "alpha": 92.38352697477562,
+      "beta": 17.02738754388286,
+      "gamma": -1.1616338938990258
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 546.5888671875,
+      "altitudeAccuracy": 6,
+      "heading": 5.5,
+      "latitude": 48.3324539,
+      "longitude": 10.86683187,
+      "speed": 1.340000033378601
+    }
+  },
+  {
+    "timestamp": 1605805720115,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.96657096112521,
+      "beta": 17.284608360141902,
+      "gamma": 1.989234891844337
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 544.949951171875,
+      "altitudeAccuracy": 4,
+      "heading": 357.8999938964844,
+      "latitude": 48.33246278,
+      "longitude": 10.86683255,
+      "speed": 1.3200000524520874
+    }
+  },
+  {
+    "timestamp": 1605805721108,
+    "orientation": {
+      "absolute": false,
+      "alpha": 86.59600120691826,
+      "beta": 16.852656668958286,
+      "gamma": -1.2158862282997014
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 544.6029052734375,
+      "altitudeAccuracy": 4,
+      "heading": 355.20001220703125,
+      "latitude": 48.33247124,
+      "longitude": 10.86683164,
+      "speed": 1.2999999523162842
+    }
+  },
+  {
+    "timestamp": 1605805722105,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.620048508609,
+      "beta": 19.422616270811275,
+      "gamma": -1.2021378760647248
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 543.635986328125,
+      "altitudeAccuracy": 6,
+      "heading": 351.70001220703125,
+      "latitude": 48.33248013,
+      "longitude": 10.86682982,
+      "speed": 1.309999942779541
+    }
+  },
+  {
+    "timestamp": 1605805723107,
+    "orientation": {
+      "absolute": false,
+      "alpha": 91.42104847086301,
+      "beta": 17.7213901096627,
+      "gamma": -2.1391978030958128
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 543.095947265625,
+      "altitudeAccuracy": 4,
+      "heading": 356.6000061035156,
+      "latitude": 48.33249035,
+      "longitude": 10.86682797,
+      "speed": 1.3300000429153442
+    }
+  },
+  {
+    "timestamp": 1605805724106,
+    "orientation": {
+      "absolute": false,
+      "alpha": 84.03956260351434,
+      "beta": 17.787416347146458,
+      "gamma": -0.8597205902063925
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 543.4013671875,
+      "altitudeAccuracy": 4,
+      "heading": 357.70001220703125,
+      "latitude": 48.33250347,
+      "longitude": 10.86682725,
+      "speed": 1.350000023841858
+    }
+  },
+  {
+    "timestamp": 1605805725114,
+    "orientation": {
+      "absolute": false,
+      "alpha": 87.7324311623341,
+      "beta": 18.06873530707617,
+      "gamma": -1.3009104793272221
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 542.783203125,
+      "altitudeAccuracy": 4,
+      "heading": 4.699999809265137,
+      "latitude": 48.3325198,
+      "longitude": 10.8668286,
+      "speed": 1.3700000047683716
+    }
+  },
+  {
+    "timestamp": 1605805726094,
+    "orientation": {
+      "absolute": false,
+      "alpha": 88.56567686536722,
+      "beta": 13.591212302271023,
+      "gamma": 1.0030647046466679
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 541.85888671875,
+      "altitudeAccuracy": 4,
+      "heading": 9.300000190734863,
+      "latitude": 48.33253458,
+      "longitude": 10.86683017,
+      "speed": 1.3600000143051147
+    }
+  },
+  {
+    "timestamp": 1605805727104,
+    "orientation": {
+      "absolute": false,
+      "alpha": 88.91283826793621,
+      "beta": 18.06385068406529,
+      "gamma": -0.15444393765916561
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 542.123779296875,
+      "altitudeAccuracy": 4,
+      "heading": 9.399999618530273,
+      "latitude": 48.3325512,
+      "longitude": 10.86683309,
+      "speed": 1.3799999952316284
+    }
+  },
+  {
+    "timestamp": 1605805728109,
+    "orientation": {
+      "absolute": false,
+      "alpha": 82.49120874167336,
+      "beta": 15.502216689265428,
+      "gamma": 9.15229596114251
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 541.977294921875,
+      "altitudeAccuracy": 4,
+      "heading": 10.199999809265137,
+      "latitude": 48.33256812,
+      "longitude": 10.86683603,
+      "speed": 1.3899999856948853
+    }
+  },
+  {
+    "timestamp": 1605805729109,
+    "orientation": {
+      "absolute": false,
+      "alpha": 81.7526993409573,
+      "beta": 18.21081732927478,
+      "gamma": 2.301165061138588
+    },
+    "coordinates": {
+      "accuracy": 3.2160000801086426,
+      "altitude": 543.122314453125,
+      "altitudeAccuracy": 4,
+      "heading": 12.699999809265137,
+      "latitude": 48.33258175,
+      "longitude": 10.86684055,
+      "speed": 1.3799999952316284
+    }
+  },
+  {
+    "timestamp": 1605805730112,
+    "orientation": {
+      "absolute": false,
+      "alpha": 85.0288126909279,
+      "beta": 17.58030968663639,
+      "gamma": 1.9025585911969338
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 543.440185546875,
+      "altitudeAccuracy": 6,
+      "heading": 11.5,
+      "latitude": 48.3325975,
+      "longitude": 10.86684833,
+      "speed": 1.3899999856948853
+    }
+  },
+  {
+    "timestamp": 1605805731097,
+    "orientation": {
+      "absolute": false,
+      "alpha": 85.71380991740916,
+      "beta": 13.674413267967303,
+      "gamma": 1.5672990836899787
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 543.6845703125,
+      "altitudeAccuracy": 6,
+      "heading": 5.300000190734863,
+      "latitude": 48.33261235,
+      "longitude": 10.8668538,
+      "speed": 1.3799999952316284
+    }
+  },
+  {
+    "timestamp": 1605805732085,
+    "orientation": {
+      "absolute": false,
+      "alpha": 85.77896717559291,
+      "beta": 15.770952547130769,
+      "gamma": 2.7105716663469606
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 543.7286376953125,
+      "altitudeAccuracy": 6,
+      "heading": 357,
+      "latitude": 48.33262677,
+      "longitude": 10.86685592,
+      "speed": 1.3799999952316284
+    }
+  },
+  {
+    "timestamp": 1605805733106,
+    "orientation": {
+      "absolute": false,
+      "alpha": 85.77303060792414,
+      "beta": 18.810756281421515,
+      "gamma": 2.50926997524831
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 543.97802734375,
+      "altitudeAccuracy": 6,
+      "heading": 358.29998779296875,
+      "latitude": 48.33264038,
+      "longitude": 10.86685646,
+      "speed": 1.3700000047683716
+    }
+  },
+  {
+    "timestamp": 1605805734102,
+    "orientation": {
+      "absolute": false,
+      "alpha": 84.79962890133108,
+      "beta": 22.32838748661051,
+      "gamma": 6.662694050396997
+    },
+    "coordinates": {
+      "accuracy": 4.288000106811523,
+      "altitude": 544.6669921875,
+      "altitudeAccuracy": 6,
+      "heading": 1.100000023841858,
+      "latitude": 48.33265228,
+      "longitude": 10.86685782,
+      "speed": 1.3600000143051147
+    }
+  }
+]
