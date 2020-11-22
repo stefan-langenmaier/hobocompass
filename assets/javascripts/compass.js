@@ -17,8 +17,7 @@ class Compass {
 
     this.geoLocationOptions = {
       enableHighAccuracy: true,
-      timeout: 2000,
-      maximumAge: 1000
+      timeout: 2000
     };
   }
 
@@ -197,7 +196,7 @@ class Compass {
   }
   
   isAccurateEnough(coordinates) {
-    return coordinates.accuracy < 25;
+    return coordinates.accuracy < 50;
   }
   
   isNew(coordinates) {
