@@ -17,14 +17,14 @@ class Compass {
 
     this.geoLocationOptions = {
       enableHighAccuracy: true,
-      timeout: 2000
+      timeout:1000
     };
   }
 
   start() {
     window.addEventListener("deviceorientation", this.handleOrientation.bind(this), true);
     this.positionId = window.navigator.geolocation.watchPosition(this.updateCoordinates.bind(this), this.noGeoPositionAvailable.bind(this), this.geoLocationOptions);
-    this.compassInterval = setInterval(this.compassInterval.bind(this), 2000);
+    this.compassInterval = setInterval(this.compassInterval.bind(this), 1000);
   }
 
   record() {
@@ -196,7 +196,7 @@ class Compass {
   }
   
   isAccurateEnough(coordinates) {
-    return coordinates.accuracy < 50;
+    return coordinates.accuracy < 25;
   }
   
   isNew(coordinates) {
